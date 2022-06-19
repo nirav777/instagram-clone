@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.post-details {
+  width: min-content;
+  margin: 35px;
+}
