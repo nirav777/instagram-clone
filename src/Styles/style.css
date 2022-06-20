@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  font-family: "Average Sans", sans-serif;
+}
+
+body {
+  background-color: #fe4c6f;
+}
+
+.header h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  margin: 25px;
 }
 
 .posts-container {
@@ -8,15 +19,300 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .post-details {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  margin: 35px;
+  margin: 4%;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 5px solid #531319;
+  background-color: #8b2030;
+  color: wheat;
+  padding: 15px;
+}
+
+.post-details button {
+  background-color: #61f054;
+  font-size: 15px;
+  width: 250px;
+  height: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-origin: 50% 60%;
+          transform-origin: 50% 60%;
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+  color: #065304;
+  cursor: pointer;
+}
+
+.post-details button:hover {
+  background-color: #065304;
+  color: #61f054;
+  -webkit-animation: bounce-up 0.3s alternate ease infinite;
+          animation: bounce-up 0.3s alternate ease infinite;
+}
+
+@-webkit-keyframes bounce-up {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+}
+
+@keyframes bounce-up {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+}
+
+.post-details b {
+  font-size: 25px;
+}
+
+.post-details .caption {
+  padding: 17px;
+}
+
+.post-details img {
+  width: 350px;
+}
+
+.post-details button {
+  outline: none;
+  cursor: pointer;
+}
+
+.post-details:hover {
+  -webkit-box-shadow: 1px 8px 100px white;
+          box-shadow: 1px 8px 100px white;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in;
+  transition: -webkit-box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in;
+  transition: box-shadow 0.3s ease-in, -webkit-box-shadow 0.3s ease-in;
+}
+
+.post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  border: 5px solid #531319;
+  background-color: #8b2030;
+  color: white;
+}
+
+.post-container hr {
+  border-radius: 5px;
+}
+
+.post-container h4 {
+  padding: 17px;
+}
+
+.post-container .post-section {
+  width: 530px;
+  color: wheat;
+  padding: 20px;
+}
+
+.post-container .post-section button {
+  background-color: #61f054;
+  font-size: 15px;
+  width: 250px;
+  height: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-origin: 50% 60%;
+          transform-origin: 50% 60%;
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+  color: #065304;
+  cursor: pointer;
+}
+
+.post-container .post-section button:hover {
+  background-color: #065304;
+  color: #61f054;
+  -webkit-animation: bounce-up 0.3s alternate ease infinite;
+          animation: bounce-up 0.3s alternate ease infinite;
+}
+
+@keyframes bounce-up {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+}
+
+.post-container .comment-section {
+  width: 530px;
+  padding: 20px;
+}
+
+.post-container .comment-section b {
+  cursor: pointer;
+  color: wheat;
+}
+
+.post-container .comment-section button {
+  background-color: #61f054;
+  font-size: 15px;
+  width: 250px;
+  height: 40px;
+  -webkit-transform-origin: 50% 60%;
+          transform-origin: 50% 60%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+  color: #065304;
+  cursor: pointer;
+}
+
+.post-container .comment-section button:hover {
+  background-color: #065304;
+  -webkit-animation: bounce-up 0.3s alternate ease infinite;
+          animation: bounce-up 0.3s alternate ease infinite;
+  color: #61f054;
+}
+
+@keyframes bounce-up {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+  }
+}
+
+.post-container .comment-section label {
+  color: red;
+  text-align: right;
+  font-size: 13px;
+  padding: 5px 15px 0px 0px;
+}
+
+.post-container img {
+  width: 475px;
+  height: 475px;
+}
+
+.post-container input {
+  width: 315px;
+  height: 35px;
+  outline: none;
+}
+
+.post-container .comment {
+  margin: 15px;
+  text-align: left;
+  font-size: 15px;
+}
+
+label {
+  display: none;
+}
+
+@media screen and (max-width: 410px) {
+  .posts-container {
+    display: block;
+    text-align: -webkit-center;
+  }
+  .posts-container .post-details {
+    width: 250px;
+  }
+  .posts-container .post-details img {
+    width: 250px;
+  }
+  .posts-container .post-details .caption {
+    padding: 0px;
+  }
+  .posts-container .post-details button {
+    width: 200px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .post-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .post-container {
+    display: block;
+    width: 65%;
+  }
+  .post-container .post-section {
+    width: 89%;
+  }
+  .post-container .post-section img {
+    width: 93%;
+    height: 87%;
+  }
+  .post-container .comment-section {
+    width: 89%;
+  }
+  .post-container .comment-section input {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .post-container {
+    display: block;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .post-container {
+    display: block;
+    width: 90%;
+  }
+  .post-container .post-section button, .post-container .comment-section button {
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .post-container {
+    display: block;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

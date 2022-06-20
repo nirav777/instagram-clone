@@ -1,14 +1,298 @@
 .App {
   text-align: center;
+  font-family: "Average Sans", sans-serif;
 }
+
+body {
+  // background-color: rgb(230, 217, 217);
+  background-color: #fe4c6f;
+}
+
+// Header
+
+.header {
+  h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 60px;
+    margin: 25px;
+  }
+}
+
+//Home Screen
 
 .posts-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .post-details {
   width: min-content;
-  margin: 35px;
+  margin: 4%;
+  border-radius: 10px;
+  transition: 0.5s;
+  border: 5px solid #531319;
+  background-color: #8b2030;
+  color: wheat;
+  padding: 15px;
+
+  button {
+    background-color: rgb(97, 240, 84);
+    font-size: 15px;
+    width: 250px;
+    height: 40px;
+    transition: 0.5s;
+    transform-origin: 50% 60%;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    color: rgb(6, 83, 4);
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgb(6, 83, 4);
+    color: rgb(97, 240, 84);
+    animation: bounce-up 0.3s alternate ease infinite;
+  }
+
+  @keyframes bounce-up {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(3px);
+    }
+  }
+
+  b {
+    font-size: 25px;
+  }
+
+  .caption {
+    padding: 17px;
+  }
+
+  img {
+    width: 350px;
+  }
+
+  button {
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.post-details:hover {
+  box-shadow: 1px 8px 100px white;
+  transition: box-shadow 0.3s ease-in;
+}
+
+//Comment Screen
+
+.post-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  width: max-content;
+  margin: auto;
+  border: 5px solid #531319;
+  background-color: #8b2030;
+  color: white;
+
+  hr {
+    border-radius: 5px;
+  }
+
+  h4 {
+    padding: 17px;
+  }
+
+  .post-section {
+    width: 530px;
+    color: wheat;
+    padding: 20px;
+
+    button {
+      background-color: rgb(97, 240, 84);
+      font-size: 15px;
+      width: 250px;
+      height: 40px;
+      transition: 0.5s;
+      transform-origin: 50% 60%;
+      border-radius: 5px;
+      margin: 5px;
+      border: none;
+      color: rgb(6, 83, 4);
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(6, 83, 4);
+      color: rgb(97, 240, 84);
+      animation: bounce-up 0.3s alternate ease infinite;
+    }
+
+    @keyframes bounce-up {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(3px);
+      }
+    }
+  }
+
+  .comment-section {
+    width: 530px;
+    padding: 20px;
+
+    b {
+      cursor: pointer;
+      color: wheat;
+    }
+
+    button {
+      background-color: rgb(97, 240, 84);
+      font-size: 15px;
+      width: 250px;
+      height: 40px;
+      transform-origin: 50% 60%;
+      transition: 0.5s;
+      border-radius: 5px;
+      margin: 5px;
+      border: none;
+      color: rgb(6, 83, 4);
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(6, 83, 4);
+      animation: bounce-up 0.3s alternate ease infinite;
+      color: rgb(97, 240, 84);
+    }
+
+    @keyframes bounce-up {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(3px);
+      }
+    }
+
+    label {
+      color: red;
+      text-align: right;
+      font-size: 13px;
+      padding: 5px 15px 0px 0px;
+    }
+  }
+
+  img {
+    width: 475px;
+    height: 475px;
+  }
+
+  input {
+    width: 315px;
+    height: 35px;
+    outline: none;
+  }
+
+  .comment {
+    margin: 15px;
+    text-align: left;
+    font-size: 15px;
+  }
+}
+
+label {
+  display: none;
+}
+
+// Mobile Responsive
+
+@media screen and (max-width: 410px) {
+  .posts-container {
+    display: block;
+    text-align: -webkit-center;
+
+    .post-details {
+      width: 250px;
+
+      img {
+        width: 250px;
+      }
+
+      .caption {
+        padding: 0px;
+      }
+
+      button {
+        width: 200px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .post-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .post-container {
+    display: block;
+    width: 65%;
+
+    .post-section {
+      width: 89%;
+
+      img {
+        width: 93%;
+        height: 87%;
+      }
+    }
+
+    .comment-section {
+      width: 89%;
+
+      input {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .post-container {
+    display: block;
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 340px) {
+  .post-container {
+    display: block;
+    width: 90%;
+
+    .post-section, .comment-section {
+
+      button {
+        width: 170px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .post-container {
+    display: block;
+    width: 100%;
+  }
 }
