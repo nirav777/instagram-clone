@@ -18,7 +18,7 @@ Instagram Clone where you can like the post and add a comment to any respective 
    
 1. Clone the repo
    ```sh
-   git clone https://github.com/nirav777/money-tracker.git
+   git clone https://github.com/nirav777/instagram-clone.git
    ```
 
 2. Install NPM packages (dependencies)
